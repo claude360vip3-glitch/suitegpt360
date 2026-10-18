@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dentista en Arequipa · Centro Odontológico en Yanahuara</title>
+<meta name="description" content="Dentista colegiado en Arequipa (Yanahuara). Odontología general, implantes, ortodoncia, endodoncia, blanqueamiento y urgencias. Reserva tu cita en línea.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__in">
+    <a class="brand" href="#inicio" aria-label="Dentista Arequipa">
+      <svg viewBox="0 0 24 24" class="brand__ico" aria-hidden="true"><path d="M7 3c-2.5 0-4 2-4 4.5 0 2 .8 3.4 1.2 5.2.5 2.2.5 4.6 1.3 7 .3.9 1.2 1.3 1.9.7.9-.8.8-3.3 1.6-5 .4-.8 1.2-1.2 2-1.2s1.600.4 2 1.200c.8 1.700.7 4.200 1.600 5 .7.600 1.600.2 1.900-.7.8-2.400.8-4.800 1.300-7 .4-1.800 1.200-3.200 1.200-5.200C21 5 19.500 3 17 3c-2 0-3 1-5 1S9 3 7 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <span><strong>Dentista Arequipa</strong><small>CENTRO ODONTOLÓGICO</small></span>
+    </a>
+    <button class="burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="menu" id="menu">
+      <a href="#servicios" class="active">Especialidad</a>
+      <a href="#servicios">Tratamiento</a>
+      <a href="#promo">Promoción</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#precios">Precios</a>
+      <a href="#blog">Blog</a>
+      <a href="tel:+51959673500" class="phone">📞 +51 959 673 500</a>
+    </nav>
+    <button class="theme" id="theme" aria-label="Cambiar tema">☀</button>
+    <a href="#reservar" class="btn btn--primary nav__cta">Reservar cita</a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__txt">
+      <span class="pill">🛡 Dentista colegiado · COP 14190</span>
+      <h1>Dentista en Arequipa <br>para <em>tu mejor sonrisa</em></h1>
+      <p class="lead">Estamos en Yanahuara. Antes de empezar, te explicamos qué necesitas y por qué.</p>
+      <div class="hero__btns">
+        <a href="#reservar" class="btn btn--primary">Reserva tu cita 📅</a>
+        <a href="#servicios" class="btn btn--ghost">Conoce nuestros servicios →</a>
+      </div>
+      <a class="call" href="tel:+51959673500">📞 Llámanos +51 959 673 500</a>
+      <ul class="feats">
+        <li><i>🛡</i><div><b>Bioseguridad</b><span>Instrumental esterilizado en cada cita</span></div></li>
+        <li><i>👥</i><div><b>Trato cercano</b><span>Te hablamos claro, sin tecnicismos</span></div></li>
+        <li><i>✔</i><div><b>Precios publicados</b><span>Los ves antes de venir</span></div></li>
+        <li><i>📅</i><div><b>Reserva fácil</b><span>En línea, en menos de un minuto</span></div></li>
+      </ul>
+    </div>
+    <div class="hero__media">
+      <div class="hero__img" role="img" aria-label="Paciente sonriendo en el consultorio">
+        <!-- Reemplaza por tu foto: <img src="img/hero.jpg" alt="..."> -->
+        <svg viewBox="0 0 400 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bfe6ee"/><stop offset="1" stop-color="#7fc4cf"/></linearGradient></defs>
+          <rect width="400" height="480" fill="url(#g)"/>
+          <ellipse cx="190" cy="190" rx="95" ry="115" fill="#e9b99a"/>
+          <path d="M80 190c0-90 70-140 140-120 60 15 70 90 55 130-20-50-60-70-110-70-45 0-70 30-85 60z" fill="#3a2418"/>
+          <path d="M140 235c30 35 80 35 110 0-10 40-100 40-110 0z" fill="#fff"/>
+          <path d="M150 238c25 22 70 22 95 0" stroke="#b5483f" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M60 480c10-110 60-150 130-150s125 40 140 150z" fill="#9bd3dc"/>
+        </svg>
+      </div>
+      <form class="card book" id="reservar" novalidate>
+        <h2>Reserva tu cita</h2>
+        <label for="svc">Servicio</label>
+        <div class="field"><select id="svc">
+          <option>Evaluación general</option><option>Limpieza dental</option><option>Implantes dentales</option>
+          <option>Ortodoncia</option><option>Endodoncia</option><option>Blanqueamiento</option><option>Urgencia dental</option>
+        </select></div>
+        <label for="fecha">Fecha preferida</label>
+        <div class="field"><input type="date" id="fecha"></div>
+        <button class="btn btn--primary btn--block" type="submit">Ver horarios disponibles 📅</button>
+        <p class="note">🔒 Primera consulta con diagnóstico gratis.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="container services" id="servicios">
+  <div class="services__side">
+    <div class="photo" role="img" aria-label="Sillón dental"><svg viewBox="0 0 200 120" aria-hidden="true"><rect width="200" height="120" fill="#dfe8ea"/><path d="M40 95c0-30 30-50 60-45l40 10c15 4 20 20 5 28l-70 12c-20 3-35-1-35-5z" fill="#2b3338"/><rect x="95" y="15" width="6" height="40" fill="#aab6ba"/><circle cx="98" cy="14" r="10" fill="#c7d2d5"/></svg></div>
+    <p class="eyebrow">DE UNA LIMPIEZA A UN IMPLANTE</p>
+    <h2>Nuestros servicios</h2>
+    <a class="btn btn--ghost" href="#precios">Ver todos →</a>
+  </div>
+  <div class="services__grid">
+    <a class="svc" href="#reservar" data-svc="Evaluación general"><span>🦷</span>Odontología</a>
+    <a class="svc" href="#reservar" data-svc="Implantes dentales"><span>🔩</span>Implantes</a>
+    <a class="svc" href="#reservar" data-svc="Ortodoncia"><span>🔗</span>Ortodoncia</a>
+    <a class="svc" href="#reservar" data-svc="Endodoncia"><span>🩺</span>Endodoncia</a>
+    <a class="svc" href="#reservar" data-svc="Blanqueamiento"><span>✨</span>Blanqueamiento</a>
+    <a class="svc" href="#reservar" data-svc="Urgencia dental"><span>🛡</span>Urgencias</a>
+  </div>
+</section>
+
+<section class="container why">
+  <div class="why__main">
+    <p class="eyebrow">POR QUÉ ELEGIRNOS</p>
+    <h2>Ir al dentista, <em>sin complicaciones</em></h2>
+    <p>Reservas en línea, citas después del trabajo y nadie que te apure en el sillón.</p>
+    <a class="btn btn--outline" href="#reservar">Tu primera visita →</a>
+    <div class="stats">
+      <div><b>15+</b><span>Años de experiencia</span></div>
+      <div><b>100%</b><span>Satisfacción garantizada</span></div>
+      <div><b>Lun–Sáb</b><span>Atención hasta las 20:00</span></div>
+    </div>
+  </div>
+  <aside class="card promo" id="promo">
+    <i>📅</i>
+    <p class="small">Para pacientes nuevos</p>
+    <h3>Diagnóstico gratis</h3>
+    <p class="muted">Agenda tu evaluación y recibe tu diagnóstico sin costo.</p>
+    <a class="btn btn--primary" href="#reservar">Reservar mi evaluación →</a>
+  </aside>
+</section>
+
+<section class="container prices" id="precios">
+  <p class="eyebrow">TRANSPARENCIA</p>
+  <h2>Precios publicados</h2>
+  <div class="table">
+    <div><span>Evaluación y diagnóstico</span><b>Gratis</b></div>
+    <div><span>Limpieza dental</span><b>Consultar</b></div>
+    <div><span>Blanqueamiento</span><b>Consultar</b></div>
+    <div><span>Endodoncia</span><b>Consultar</b></div>
+  </div>
+  <p class="muted">Edita estos montos en <code>index.html</code> con tus tarifas reales.</p>
+</section>
+
+<section class="container blog" id="blog">
+  <p class="eyebrow">BLOG</p>
+  <h2>Consejos para tu salud dental</h2>
+  <div class="posts">
+    <article class="card"><h3>¿Cada cuánto debo limpiarme los dientes?</h3><p class="muted">Frecuencia recomendada según tu caso.</p></article>
+    <article class="card"><h3>Implantes vs. puentes: ¿qué conviene?</h3><p class="muted">Ventajas, tiempos y cuidados.</p></article>
+    <article class="card"><h3>Urgencias dentales: qué hacer</h3><p class="muted">Primeros pasos antes de llegar a la consulta.</p></article>
+  </div>
+</section>
+
+<section class="container loc" id="ubicacion">
+  <div class="card">
+    <p class="eyebrow">UBICACIÓN</p>
+    <h2>Estamos en Yanahuara, Arequipa</h2>
+    <p class="muted">Lun–Sáb hasta las 20:00.</p>
+    <iframe title="Mapa" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-71.55%2C-16.40%2C-71.52%2C-16.38&layer=mapnik"></iframe>
+  </div>
+  <div class="card" id="contacto">
+    <p class="eyebrow">CONTACTO</p>
+    <h2>Hablemos</h2>
+    <p>📞 <a href="tel:+51959673500">+51 959 673 500</a></p>
+    <a class="btn btn--primary" target="_blank" rel="noopener" href="https://wa.me/51951186809">Escríbenos por WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer><div class="container">© <span id="y"></span> Dentista Arequipa · Dentista colegiado COP 14190</div></footer>
+
+<a class="wa" target="_blank" rel="noopener" href="https://wa.me/51951186809" aria-label="WhatsApp">💬</a>
+<script src="app.js"></script>
+</body>
+</html>
