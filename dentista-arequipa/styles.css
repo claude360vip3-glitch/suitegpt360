@@ -74,3 +74,11 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);text-a
 .menu.open{display:flex}.nav__cta{display:none}
 }
 @media(max-width:560px){.feats,.stats,.posts{grid-template-columns:1fr}.services__grid{grid-template-columns:1fr 1fr}}
+.menu a,.nav__cta,.phone{white-space:nowrap}
+.menu{gap:16px;font-size:14px}
+.nav__in{gap:12px}
+.hero__img svg{object-position:left center}
+.book{top:auto;bottom:0;width:min(400px,60%)}
+@media(max-width:1200px){.phone{display:none}}
+@media(max-width:960px){.book{width:100%}}
+.book{width:min(380px,56%)}@media(max-width:960px){.book{width:100%}}
