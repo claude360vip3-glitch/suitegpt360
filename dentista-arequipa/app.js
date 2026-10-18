@@ -1,4 +1,4 @@
-const WA = '51951186809';
+const WA = '51900378240';
 const $ = (s) => document.querySelector(s);
 
 document.getElementById('y').textContent = new Date().getFullYear();
