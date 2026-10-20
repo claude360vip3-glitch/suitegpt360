@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Grupo Scorpions Tech - Promo 15s</title>
+    <script src="vendor/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; background: #0b0b0d; }
+      body { font-family: sans-serif; color: #f5f3ef; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0b0d; }
+
+      /* fondo persistente */
+      .bg-glow { position: absolute; inset: 0;
+        background: radial-gradient(circle at 70% 38%, #3d1a0b 0, #15100d 45%, #0a0a0b 100%); }
+      .bg-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 18px; background: #ff4d12; }
+
+      .clip { position: absolute; inset: 0; display: flex; flex-direction: column;
+        justify-content: center; padding: 160px 80px 240px; }
+
+      h1, h2, p, span { text-transform: none; }
+      .eyebrow { font-size: 40px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #ff8a1f; margin-bottom: 28px; }
+      .title { font-size: 150px; font-weight: 900; line-height: 0.98; text-transform: uppercase; letter-spacing: -0.01em; }
+      .title em { font-style: normal; color: #ff4d12; }
+      .sub { font-size: 52px; font-weight: 600; line-height: 1.25; margin-top: 36px; color: #f5f3ef; max-width: 900px; }
+
+      /* escena 1: marca */
+      .mark { width: 260px; height: 260px; background: #ff4d12; display: block; margin-bottom: 56px; }
+      /* escena 2: parlante */
+      .spk { width: 400px; height: 640px; border-radius: 64px; background: #17171b; border: 14px solid #ff4d12;
+        position: relative; align-self: flex-end; margin-top: -60px; box-shadow: 0 40px 120px rgba(255,77,18,0.35); }
+      .spk i { position: absolute; left: 50%; border-radius: 50%; background: #0b0b0d; border: 10px solid #ff4d12; transform-origin: center; }
+      .spk .t { width: 190px; height: 190px; top: 90px; margin-left: -95px; }
+      .spk .b { width: 250px; height: 250px; top: 330px; margin-left: -125px; border-color: #ff8a1f; }
+      .spk .led { position: absolute; left: 90px; right: 90px; top: 36px; height: 16px; border-radius: 8px; background: #ff4d12; }
+      /* escena 3: oferta */
+      .big { font-size: 290px; font-weight: 900; line-height: 0.9; color: #ff4d12; text-transform: uppercase; }
+      .big small { font-size: 140px; }
+      /* escena 4: categorias */
+      .chips { display: flex; flex-direction: column; gap: 26px; margin-top: 50px; }
+      .chip { background: #f7f3ec; color: #111; font-size: 70px; font-weight: 800; padding: 30px 44px; text-transform: uppercase; display: flex; justify-content: space-between; }
+      .chip b { color: #ff4d12; }
+      /* escena 5: cta */
+      .wa { background: #0e7a3c; color: #fff; font-size: 64px; font-weight: 800; padding: 40px 50px; text-align: center; margin-top: 60px; }
+      .num { font-size: 76px; font-weight: 900; margin-top: 36px; letter-spacing: 0.02em; }
+      .coupon { margin-top: 30px; font-size: 46px; font-weight: 700; color: #ff8a1f; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+      <div class="bg-glow"></div>
+      <div class="bg-bar"></div>
+
+      <section id="s1" class="clip" data-start="0" data-duration="3" data-track-index="1">
+        <span id="s1-mark" class="mark"></span>
+        <div id="s1-eyebrow" class="eyebrow">Electrónica y audio</div>
+        <h1 id="s1-title" class="title">Grupo<br />Scorpions <em>Tech</em></h1>
+        <p id="s1-sub" class="sub">Sonido que se siente.</p>
+      </section>
+
+      <section id="s2" class="clip" data-start="3" data-duration="3" data-track-index="1">
+        <div id="s2-eyebrow" class="eyebrow">Preventa</div>
+        <h2 id="s2-title" class="title">Scorpion<br /><em>Boom</em> Pro</h2>
+        <p id="s2-sub" class="sub">Regalo exclusivo por tu compra. Asegura el tuyo.</p>
+        <div id="s2-spk" class="spk"><div class="led"></div><i class="t"></i><i class="b"></i></div>
+      </section>
+
+      <section id="s3" class="clip" data-start="6" data-duration="3" data-track-index="1">
+        <div id="s3-eyebrow" class="eyebrow">Semana de ofertas</div>
+        <div id="s3-big" class="big">Hasta<br />70%<small> OFF*</small></div>
+        <p id="s3-sub" class="sub">Sonido auténtico para acompañar tus días.</p>
+      </section>
+
+      <section id="s4" class="clip" data-start="9" data-duration="3" data-track-index="1">
+        <div id="s4-eyebrow" class="eyebrow">Encuentra el tuyo</div>
+        <h2 id="s4-title" class="title" style="font-size: 120px">Todo tu<br /><em>audio</em></h2>
+        <div class="chips">
+          <div class="chip s4-chip">Parlantes <b>→</b></div>
+          <div class="chip s4-chip">Audífonos <b>→</b></div>
+          <div class="chip s4-chip">True Wireless <b>→</b></div>
+          <div class="chip s4-chip">Gaming <b>→</b></div>
+        </div>
+      </section>
+
+      <section id="s5" class="clip" data-start="12" data-duration="3" data-track-index="1">
+        <div id="s5-eyebrow" class="eyebrow">Envíos a todo el Perú</div>
+        <h2 id="s5-title" class="title" style="font-size: 130px">Cotiza<br />hoy por <em>WhatsApp</em></h2>
+        <div id="s5-wa" class="wa">Escríbenos ahora</div>
+        <div id="s5-num" class="num">+51 999 999 999</div>
+        <div id="s5-coupon" class="coupon">Cupón SCORPION5: 5% OFF en tu primera compra</div>
+      </section>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const IN = { opacity: 0, y: 70 };
+      const to = { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" };
+      const out = (sel, t) => tl.to(sel, { opacity: 0, y: -40, duration: 0.3, ease: "power2.in" }, t);
+
+      // escena 1
+      tl.fromTo("#s1-mark", { scale: 0, rotation: -40 }, { scale: 1, rotation: 0, duration: 0.7, ease: "back.out(1.6)" }, 0.1);
+      tl.fromTo("#s1-eyebrow", IN, { ...to }, 0.4);
+      tl.fromTo("#s1-title", IN, { ...to, duration: 0.8 }, 0.55);
+      tl.fromTo("#s1-sub", IN, { ...to }, 1.2);
+      out("#s1 > *", 2.65);
+
+      // escena 2
+      tl.fromTo("#s2-eyebrow", IN, { ...to }, 3.1);
+      tl.fromTo("#s2-title", IN, { ...to, duration: 0.8 }, 3.2);
+      tl.fromTo("#s2-sub", IN, { ...to }, 3.8);
+      tl.fromTo("#s2-spk", { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 0.9, ease: "power3.out" }, 3.4);
+      out("#s2 > *", 5.65);
+
+      // escena 3
+      tl.fromTo("#s3-eyebrow", IN, { ...to }, 6.1);
+      tl.fromTo("#s3-big", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.4)" }, 6.2);
+      tl.fromTo("#s3-sub", IN, { ...to }, 6.9);
+      out("#s3 > *", 8.65);
+
+      // escena 4
+      tl.fromTo("#s4-eyebrow", IN, { ...to }, 9.1);
+      tl.fromTo("#s4-title", IN, { ...to }, 9.2);
+      tl.fromTo(".s4-chip", { opacity: 0, x: -120 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out", stagger: 0.18 }, 9.6);
+      out("#s4 > *", 11.65);
+
+      // escena 5 (queda en pantalla hasta el final)
+      tl.fromTo("#s5-eyebrow", IN, { ...to }, 12.1);
+      tl.fromTo("#s5-title", IN, { ...to, duration: 0.8 }, 12.2);
+      tl.fromTo("#s5-wa", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.5)" }, 12.9);
+      tl.fromTo("#s5-num", IN, { ...to }, 13.3);
+      tl.fromTo("#s5-coupon", IN, { ...to }, 13.7);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
