@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grupo Scorpions Tech | Electrónica y Audio</title>
+<meta name="description" content="Parlantes, audífonos, barras de sonido y accesorios. Cotiza por WhatsApp con Grupo Scorpions Tech.">
+<style>
+:root{
+  --bg:#0b0b0d; --bg2:#141418; --card:#1a1a20; --line:#2a2a32;
+  --text:#f5f3ef; --muted:#a9a7a2; --accent:#ff4d12; --accent2:#ff8a1f;
+  --light:#f7f3ec; --wa:#25d366;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;padding:14px 26px;border:0;cursor:pointer;font-size:1rem;transition:.2s}
+.btn:hover{background:#e03d05}
+.btn.ghost{background:#fff;color:#111}
+.btn.ghost:hover{background:var(--light)}
+h1,h2,h3{font-family:Impact,"Arial Narrow Bold","Arial Black",sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+
+/* Barra superior */
+.promo{background:var(--light);color:#111;font-size:.82rem;font-weight:700;text-align:center;padding:9px 16px;text-transform:uppercase}
+.promo b{color:var(--accent)}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:#fff;color:#111;border-bottom:1px solid #e5e5e5}
+.nav{display:flex;align-items:center;gap:32px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Impact,"Arial Black",sans-serif;text-transform:uppercase;font-size:1.15rem;line-height:1}
+.logo svg{width:38px;height:38px;flex:none}
+.logo small{display:block;font-family:"Segoe UI",sans-serif;font-size:.62rem;letter-spacing:.28em;color:var(--accent);margin-top:3px}
+.menu{display:flex;gap:26px;font-weight:600;font-size:.95rem;flex:1}
+.menu a:hover{color:var(--accent)}
+.nav-cta{background:var(--wa);color:#fff;font-weight:700;padding:10px 18px;font-size:.9rem;display:flex;align-items:center;gap:8px}
+.burger{display:none;background:none;border:0;font-size:1.8rem;cursor:pointer;color:#111}
+
+/* Hero */
+.hero{position:relative;min-height:620px;display:flex;align-items:flex-end;overflow:hidden;
+  background:radial-gradient(circle at 72% 45%,#3a1a0c 0,#15100d 45%,#0a0a0b 100%)}
+.hero-art{position:absolute;right:5%;top:50%;transform:translateY(-52%);width:min(300px,28vw);filter:drop-shadow(0 30px 60px rgba(255,77,18,.35))}
+.hero-copy{position:relative;padding:0 0 70px;max-width:600px}
+.hero h1{font-size:clamp(3rem,8vw,6rem);margin-bottom:18px}
+.hero p{font-size:1.15rem;font-weight:600;margin-bottom:26px}
+.slidebar{background:#fff;color:#111;border-top:1px solid #eee}
+.slidebar .wrap{display:flex;align-items:center;gap:22px;height:52px}
+.slidebar i{flex:1;height:2px;background:#ddd;position:relative}
+.slidebar i:after{content:"";position:absolute;left:0;top:0;height:100%;width:33%;background:#111}
+.slidebar span{font-size:.9rem}
+
+/* Accesos rápidos */
+.quick{background:var(--light);color:#111;border-bottom:1px solid var(--accent)}
+.quick .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.quick a{display:flex;justify-content:center;align-items:center;gap:12px;padding:26px 10px;font-weight:700;border-right:1px solid var(--accent)}
+.quick a:last-child{border-right:0}
+.quick a:hover{background:#fff}
+.quick em{font-style:normal;font-size:1.5rem}
+
+/* Banners */
+.banners{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
+.banner{position:relative;min-height:520px;display:flex;flex-direction:column;justify-content:flex-end;padding:40px;overflow:hidden}
+.banner.a{background:linear-gradient(160deg,#ff8a1f,#e0580a)}
+.banner.b{background:linear-gradient(160deg,#2b2f3a,#0f1116)}
+.banner h2{font-size:clamp(2.4rem,5vw,3.8rem);margin-bottom:10px}
+.banner p{margin-bottom:22px;max-width:460px}
+.banner .big{position:absolute;right:30px;top:30px;width:46%;opacity:.95}
+
+/* Categorías */
+.cats{background:#8da2fb;color:#000;text-align:center;padding:90px 0}
+.cats h2{font-size:clamp(2.6rem,7vw,5.6rem);margin-bottom:18px}
+.cats p{max-width:820px;margin:0 auto 48px;font-size:1.05rem}
+.cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;text-align:left}
+.cat{background:#fff;color:#111}
+.cat .ph{aspect-ratio:1/1;display:grid;place-items:center;font-size:4rem}
+.cat span{display:block;padding:22px;text-align:center;font-weight:700}
+.cat:hover span{color:var(--accent)}
+.g1{background:linear-gradient(135deg,#1d5f7a,#0b2c3b)}
+.g2{background:linear-gradient(135deg,#8a6a4f,#3b2b20)}
+.g3{background:linear-gradient(135deg,#4a5a7a,#1b2233)}
+.g4{background:linear-gradient(135deg,#d9a79b,#7a4a45)}
+.g5{background:linear-gradient(135deg,#2f6b5a,#0f2a24)}
+
+/* Destacados */
+.featured{background:#fff;color:#111;padding:60px 0 0}
+.featured h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:34px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #e3dfd2}
+.prod{padding:22px 20px 28px;border-right:1px solid #e3dfd2;border-bottom:1px solid #e3dfd2;display:flex;flex-direction:column}
+.prod:nth-child(4n){border-right:0}
+.tag{align-self:flex-start;font-size:.75rem;font-weight:800;padding:6px 10px;color:#fff;background:var(--accent);text-transform:uppercase}
+.tag.offer{background:#8da2fb}
+.prod .img{height:230px;display:grid;place-items:center;margin:10px 0 14px}
+.prod .img svg{height:190px;width:auto;max-width:90%}
+.swatches{display:flex;gap:8px;margin-bottom:14px}
+.swatches b{width:24px;height:24px;border:1px solid #ccc}
+.prod hr{border:0;border-top:1px solid var(--accent);margin-bottom:14px}
+.prod h3{font-family:inherit;text-transform:none;font-size:1.05rem;font-weight:700;margin-bottom:6px}
+.prod p{font-size:.9rem;color:#555;margin-bottom:12px;flex:1}
+.price{font-weight:800;font-size:1.15rem;margin-bottom:14px}
+.price s{font-weight:400;color:#888;font-size:.9rem;margin-left:6px}
+.wa{display:flex;justify-content:center;align-items:center;gap:8px;background:var(--wa);color:#fff;font-weight:700;padding:12px;font-size:.92rem}
+.wa:hover{filter:brightness(.92)}
+
+/* Por qué */
+.why{padding:90px 0;background:var(--bg2)}
+.why h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:40px}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.why-item{background:var(--card);border:1px solid var(--line);padding:28px}
+.why-item em{font-style:normal;font-size:2rem;display:block;margin-bottom:12px}
+.why-item h3{font-family:inherit;text-transform:none;font-size:1.1rem;margin-bottom:8px}
+.why-item p{color:var(--muted);font-size:.93rem}
+
+/* CTA */
+.cta{background:var(--accent);padding:60px 0;text-align:center}
+.cta h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:12px}
+.cta p{margin-bottom:24px}
+
+/* Footer */
+footer{background:#000;padding:60px 0 30px;position:relative;overflow:hidden}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;position:relative}
+footer h4{color:var(--accent);text-transform:uppercase;margin-bottom:16px;font-size:1rem}
+footer li{list-style:none;margin-bottom:10px}
+footer li a:hover{color:var(--accent)}
+.legal{margin-top:50px;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;position:relative}
+.watermark{position:absolute;right:-20px;bottom:-40px;font-family:Impact,sans-serif;font-size:11rem;color:var(--accent);opacity:.9;line-height:1;pointer-events:none;text-transform:uppercase}
+
+/* Flotante */
+.float{position:fixed;right:22px;bottom:22px;z-index:60;background:var(--wa);color:#fff;font-weight:700;padding:14px 20px;border-radius:40px;box-shadow:0 8px 24px rgba(0,0,0,.4);display:flex;gap:8px;align-items:center}
+
+@media(max-width:1000px){
+  .products{grid-template-columns:repeat(2,1fr)}
+  .prod:nth-child(4n){border-right:1px solid #e3dfd2}
+  .prod:nth-child(2n){border-right:0}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid,.foot{grid-template-columns:repeat(2,1fr)}
+  .banners{grid-template-columns:1fr}
+  .quick .wrap{grid-template-columns:repeat(2,1fr)}
+  .quick a:nth-child(2){border-right:0}
+  .watermark{font-size:6rem}
+}
+@media(max-width:720px){
+  .menu{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid #ddd}
+  .menu.open{display:flex}
+  .burger{display:block;margin-left:auto}
+  .nav-cta{display:none}
+  .hero{min-height:560px}
+  .hero-art{opacity:.35;right:-10%;width:70vw}
+  .products,.why-grid,.foot{grid-template-columns:1fr}
+  .prod{border-right:0!important}
+  .banner{min-height:420px;padding:26px}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+
+<div class="promo">Recibe <b>5% OFF</b> adicional en tu primera compra con el cupón <b>SCORPION5</b></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#inicio" aria-label="Grupo Scorpions Tech">
+      <!-- Logo placeholder: reemplazar por el logo real -->
+      <svg viewBox="0 0 64 64" fill="none" stroke="#ff4d12" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="1" y="1" width="62" height="62" fill="#ff4d12" stroke="none"/>
+        <path stroke="#fff" d="M18 50c-8-6-8-20 2-26 6-4 14-2 16 4M36 28c6-2 10 2 8 8M44 36c4 2 6 6 4 10M20 24l-6-8M14 16l8 0"/>
+      </svg>
+      <span>Grupo Scorpions<small>TECH</small></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#parlantes">Parlantes</a>
+      <a href="#hogar">Audio para Hogar</a>
+      <a href="#audifonos">Audífonos</a>
+      <a href="#wireless">True Wireless</a>
+      <a href="#gaming">Gaming</a>
+      <a href="#accesorios">Accesorios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="nav-cta" href="https://wa.me/51999999999?text=Hola%20Grupo%20Scorpions%20Tech%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener">WhatsApp</a>
+    <button class="burger" id="burger" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <svg class="hero-art" viewBox="0 0 200 320" aria-hidden="true">
+      <rect x="30" y="10" width="140" height="300" rx="26" fill="#17171b" stroke="#ff4d12" stroke-width="5"/>
+      <circle cx="100" cy="110" r="46" fill="#0b0b0d" stroke="#ff4d12" stroke-width="4"/>
+      <circle cx="100" cy="110" r="22" fill="#222"/>
+      <circle cx="100" cy="225" r="58" fill="#0b0b0d" stroke="#ff8a1f" stroke-width="4"/>
+      <circle cx="100" cy="225" r="28" fill="#222"/>
+      <rect x="60" y="30" width="80" height="8" rx="4" fill="#ff4d12"/>
+    </svg>
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1>Preventa Scorpion Boom Pro</h1>
+        <p>Recibe un regalo exclusivo por tu compra. ¡Escríbenos y asegura el tuyo!<br>Envíos a todo el Perú y facilidades de pago.</p>
+        <a class="btn" href="https://wa.me/51999999999?text=Quiero%20la%20preventa%20Scorpion%20Boom%20Pro" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+  <div class="slidebar"><div class="wrap"><span>‹ ›</span><i></i><span>01 / 03</span></div></div>
+
+  <section class="quick">
+    <div class="wrap">
+      <a href="#destacados"><em>🏷️</em> Lanzamientos →</a>
+      <a href="#contacto"><em>🚚</em> Envío a todo el Perú →</a>
+      <a href="#porque"><em>✅</em> Garantía de tienda →</a>
+      <a href="#contacto"><em>🛠️</em> Soporte técnico →</a>
+    </div>
+  </section>
+
+  <section class="banners">
+    <article class="banner a">
+      <svg class="big" viewBox="0 0 240 160" aria-hidden="true">
+        <rect x="10" y="60" width="150" height="26" rx="6" fill="#222"/>
+        <rect x="150" y="10" width="70" height="80" rx="4" fill="#333"/>
+        <circle cx="70" cy="120" r="26" fill="#eee"/><circle cx="70" cy="120" r="12" fill="#bbb"/>
+      </svg>
+      <h2>Hasta 70% OFF*</h2>
+      <p>Sonido auténtico para acompañar tus días.</p>
+      <a class="btn ghost" href="#destacados" style="align-self:flex-start">Comprar ahora</a>
+    </article>
+    <article class="banner b">
+      <svg class="big" viewBox="0 0 200 160" aria-hidden="true">
+        <path d="M60 80a40 40 0 0 1 80 0" fill="none" stroke="#ff8a1f" stroke-width="10" stroke-linecap="round"/>
+        <rect x="46" y="76" width="22" height="46" rx="10" fill="#ff4d12"/><rect x="132" y="76" width="22" height="46" rx="10" fill="#ff4d12"/>
+      </svg>
+      <h2>Audífonos True Wireless</h2>
+      <p>Hasta 60% off*. Disfruta tu música con cero cables y enredos.</p>
+      <a class="btn ghost" href="#wireless" style="align-self:flex-start">Comprar ahora</a>
+    </article>
+  </section>
+
+  <section class="cats">
+    <div class="wrap">
+      <h2>Nuestro audio lo es todo</h2>
+      <p>Productos pensados para fiestas, para estudiar, para jugar. Sea cual sea tu forma de escuchar, en Grupo Scorpions Tech encuentras calidad de sonido, durabilidad y todas las sensaciones.</p>
+      <div class="cat-grid">
+        <a class="cat" id="parlantes" href="#destacados"><div class="ph g1">🔊</div><span>Parlantes →</span></a>
+        <a class="cat" id="hogar" href="#destacados"><div class="ph g2">📺</div><span>Audio para Hogar →</span></a>
+        <a class="cat" id="audifonos" href="#destacados"><div class="ph g3">🎧</div><span>Audífonos →</span></a>
+        <a class="cat" id="wireless" href="#destacados"><div class="ph g4">🎵</div><span>True Wireless →</span></a>
+        <a class="cat" id="gaming" href="#destacados"><div class="ph g5">🎮</div><span>Gaming →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured" id="destacados">
+    <div class="wrap">
+      <h2>Destacados de la semana</h2>
+    </div>
+    <div class="wrap" style="max-width:none;padding:0">
+      <div class="products" id="products"></div>
+    </div>
+  </section>
+
+  <section class="why" id="porque">
+    <div class="wrap">
+      <h2>Por qué Grupo Scorpions Tech</h2>
+      <div class="why-grid">
+        <div class="why-item"><em>🛡️</em><h3>Garantía real</h3><p>Productos originales con garantía y comprobante de venta.</p></div>
+        <div class="why-item"><em>🚚</em><h3>Envíos a todo el Perú</h3><p>Despacho a Lima y provincias con seguimiento de tu pedido.</p></div>
+        <div class="why-item"><em>💬</em><h3>Atención por WhatsApp</h3><p>Asesoría directa para elegir el equipo ideal, sin vueltas.</p></div>
+        <div class="why-item"><em>💳</em><h3>Facilidades de pago</h3><p>Yape, Plin, transferencias y tarjetas. Consulta cuotas.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contacto">
+    <div class="wrap">
+      <h2>¿Listo para tu próximo equipo?</h2>
+      <p>Cuéntanos qué buscas y te enviamos la cotización al instante.</p>
+      <a class="btn ghost" href="https://wa.me/51999999999?text=Hola%20Grupo%20Scorpions%20Tech%2C%20quiero%20cotizar" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><h4>Tienda</h4><ul>
+        <li><a href="#parlantes">Parlantes</a></li><li><a href="#accesorios">Accesorios</a></li><li><a href="#hogar">Audio para Hogar</a></li>
+        <li><a href="#audifonos">Audífonos</a></li><li><a href="#wireless">True Wireless</a></li><li><a href="#gaming">Gaming</a></li></ul></div>
+      <div><h4>Soporte</h4><ul>
+        <li><a href="#contacto">Estado del pedido</a></li><li><a href="#contacto">Soporte de producto</a></li>
+        <li><a href="#porque">Compra original</a></li><li><a href="#">Libro de reclamaciones</a></li></ul></div>
+      <div><h4>Sobre nosotros</h4><ul>
+        <li><a href="#">Quiénes somos</a></li><li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Términos y condiciones</a></li><li><a href="#">Preguntas frecuentes</a></li></ul></div>
+      <div><h4>Contáctanos</h4><ul>
+        <li><a href="https://wa.me/51999999999" target="_blank" rel="noopener">WhatsApp: +51 999 999 999</a></li>
+        <li><a href="mailto:ventas@scorpionstech.pe">ventas@scorpionstech.pe</a></li>
+        <li>Lima, Perú</li></ul>
+        <h4 style="margin-top:22px">Síguenos</h4>
+        <ul><li><a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="#">TikTok</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© <span id="year"></span> Grupo Scorpions Tech. Todos los derechos reservados.</span><span>Perú 🇵🇪</span></div>
+    <div class="watermark" aria-hidden="true">GST</div>
+  </div>
+</footer>
+
+<a class="float" href="https://wa.me/51999999999?text=Hola%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener">💬 WhatsApp</a>
+
+<script>
+// Datos de ejemplo: reemplazar por productos y precios reales.
+const WA = "51999999999";
+const products = [
+  {tag:"Oferta", offer:true, name:"Barra de sonido Scorpion Cinema 580", desc:"3.1 canales con Dolby Atmos virtual y subwoofer inalámbrico.", price:"S/ 899", old:"S/ 1,199", colors:["#111"], shape:"bar"},
+  {tag:"Nuevo", name:"Scorpion Boombox 4", desc:"Parlante portátil resistente al agua, graves potentes.", price:"S/ 1,299", colors:["#3a4a6a","#111"], shape:"boom"},
+  {tag:"", name:"Scorpion PartyBox 130", desc:"Parlante para fiestas con asa ergonómica plegable.", price:"S/ 1,099", colors:["#fff","#111"], shape:"party"},
+  {tag:"Oferta", offer:true, name:"Scorpion Charge 6", desc:"Resistente al agua y a las caídas con sonido Pro.", price:"S/ 599", old:"S/ 749", colors:["#d98e8e","#3a4a6a","#5cc3d6","#111","#b3241a"], shape:"charge"},
+  {tag:"Nuevo", name:"Audífonos Scorpion Live 680NC", desc:"Supraaurales con cancelación de ruido adaptativa.", price:"S/ 549", colors:["#2b3270","#111","#d6c29a","#fff"], shape:"head"},
+  {tag:"", name:"Scorpion Buds Air", desc:"True Wireless con estuche de carga y 24 h de batería.", price:"S/ 249", colors:["#111","#fff"], shape:"buds"},
+  {tag:"Oferta", offer:true, name:"Headset Gamer Scorpion X1", desc:"Audio envolvente 7.1 con micrófono desmontable.", price:"S/ 329", old:"S/ 429", colors:["#111","#b3241a"], shape:"head"},
+  {tag:"", name:"Cable USB-C Trenzado 1.5 m", desc:"Carga rápida y transferencia de datos. Accesorio.", price:"S/ 39", colors:["#111"], shape:"cable"},
+];
+const shapes = {
+  bar:'<svg viewBox="0 0 220 120"><rect x="10" y="70" width="170" height="16" rx="3" fill="#222"/><rect x="150" y="14" width="56" height="62" rx="3" fill="#333"/></svg>',
+  boom:'<svg viewBox="0 0 220 120"><rect x="10" y="25" width="200" height="80" rx="38" fill="#3a4a6a"/><circle cx="70" cy="65" r="22" fill="#222"/><circle cx="150" cy="65" r="22" fill="#222"/></svg>',
+  party:'<svg viewBox="0 0 120 200"><rect x="10" y="10" width="100" height="180" rx="20" fill="#e5e5e5" stroke="#9cd" stroke-width="4"/><circle cx="60" cy="65" r="26" fill="#9dd6e8"/><circle cx="60" cy="140" r="30" fill="#9dd6e8"/></svg>',
+  charge:'<svg viewBox="0 0 220 120"><rect x="10" y="25" width="200" height="75" rx="36" fill="#5cc3d6"/><rect x="60" y="45" width="100" height="35" rx="10" fill="#8ad8e6"/></svg>',
+  head:'<svg viewBox="0 0 160 160"><path d="M30 90a50 50 0 0 1 100 0" fill="none" stroke="#ddd" stroke-width="10" stroke-linecap="round"/><rect x="18" y="86" width="28" height="52" rx="13" fill="#eee" stroke="#bbb"/><rect x="114" y="86" width="28" height="52" rx="13" fill="#eee" stroke="#bbb"/></svg>',
+  buds:'<svg viewBox="0 0 160 120"><circle cx="55" cy="55" r="22" fill="#222"/><rect x="48" y="70" width="12" height="36" rx="6" fill="#222"/><circle cx="105" cy="55" r="22" fill="#222"/><rect x="98" y="70" width="12" height="36" rx="6" fill="#222"/></svg>',
+  cable:'<svg viewBox="0 0 200 120"><path d="M20 90c40-80 80 40 120-30s40-20 40-20" fill="none" stroke="#222" stroke-width="8" stroke-linecap="round"/></svg>',
+};
+document.getElementById("products").innerHTML = products.map(p => {
+  const msg = encodeURIComponent("Hola Grupo Scorpions Tech, quiero cotizar: " + p.name);
+  return `<article class="prod">
+    ${p.tag ? `<span class="tag ${p.offer ? "offer" : ""}">${p.tag}</span>` : `<span style="height:26px"></span>`}
+    <div class="img">${shapes[p.shape]}</div>
+    <div class="swatches">${p.colors.map(c => `<b style="background:${c}"></b>`).join("")}</div>
+    <hr>
+    <h3>${p.name}</h3>
+    <p>${p.desc}</p>
+    <div class="price">${p.price}${p.old ? `<s>${p.old}</s>` : ""}</div>
+    <a class="wa" href="https://wa.me/${WA}?text=${msg}" target="_blank" rel="noopener">💬 Cotizar por WhatsApp</a>
+  </article>`;
+}).join("");
+document.getElementById("year").textContent = new Date().getFullYear();
+const menu = document.getElementById("menu");
+document.getElementById("burger").onclick = () => menu.classList.toggle("open");
+menu.addEventListener("click", e => { if (e.target.tagName === "A") menu.classList.remove("open"); });
+</script>
+</body>
+</html>
